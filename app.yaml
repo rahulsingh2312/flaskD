@@ -1,0 +1,8 @@
+runtime: python39
+# Handlers define how URL paths correspond to application resources.
+
+handlers:
+- url: /static
+  static_dir: static/
+- url: /.*
+  script: auto

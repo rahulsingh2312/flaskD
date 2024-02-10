@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <style>
+        /* Overall body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #0077B6, #ffffff);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Header styling */
+        h2 {
+            background: white;
+            opacity: 0.8;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 28px;
+            font-weight: bold;
+            color: #0077B6;
+            text-shadow: 0 0 5px #00B4DB, 0 0 10px #00B4DB;
+            margin-bottom: 20px;
+        }
+
+        /* Image styling */
+        img {
+            max-width: 80%; /* Limits the size to ensure it's not too big */
+            max-height: 600px; /* Adjust based on your preference for 'perfect size' */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for enhancement */
+            border-radius: 10px; /* Rounded corners for the image */
+            margin-bottom: 20px; /* Space between the image and the link */
+        }
+
+        /* Link styling */
+        a {
+            display: inline-block;
+            background: #0077B6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        a:hover {
+            background: #005f8d;
+        }
+    </style>
+</head>
+<body>
+    <h2>Processed Image</h2>
+    <!-- Display the image using Base64 data URL -->
+    <img src="data:image/png;base64,{{ img_data }}" alt="Processed Image">
+    <br>
+    <a href="/">Upload Another</a>
+</body>
+</html>
